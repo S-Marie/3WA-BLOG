@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<h2><i class="fas fa-cogs"></i> Panneau d'Administration </h2>
+<section id="article">
+<article id="table">
+<a href="nouveau.php"><i class="fas fa-pencil-alt"></i> Rédiger un nouvel article</a>
+<h3 id="title2">Liste des articles</h3>
+
+<table class="table1">
+	<tr>
+	<td>Titre</td>
+	<td>Article</td>
+	<td>Auteur</td>
+	<td>Catégorie</td>
+	</tr>
+	<tr>
+	<?php foreach($allposts as $allpost): ?>
+		<tr>
+		<td><?= htmlspecialchars($allpost['Title']) ?></td>
+		<td><?= htmlspecialchars($allpost['Contents']) ?></td>
+		<td><?= htmlspecialchars($allpost['FirstName']) ?></td>
+		<td><?= htmlspecialchars($allpost['Name']) ?></td>
+		<td><a href="update.php?id=<?= intval($post['Id']) ?>"><i class="fas fa-edit"></i></a> - <a href="delete.php?id=<?= intval($allpost['Id']) ?>" ><i class="fas fa-eraser"></i></a></td>
+		</tr>
+	<?php endforeach; ?>
+	</table>
+</article>
+</section>
+</html>

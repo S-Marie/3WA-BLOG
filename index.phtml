@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<h2><i class="fas fa-home"></i> Accueil</h2>
+<section id="article">
+   
+     <?php foreach($posts as $post): ?>
+     	<article>
+        	<h3 id="title"><a href="show_post.php?id=<?= intval($post['Id']) ?>" title="Consulter l'article"><i class="fas fa-thumbs-up"></i> <?= htmlspecialchars($post['Title']) ?></a></h3>
+          		<p id="contents"><?= htmlspecialchars($post['Contents']) ?></p>
+         		 <p id="source">Rédigé par <span><?= htmlspecialchars($post['FirstName']) ?> <?= htmlspecialchars($post['LastName']) ?></span> le <span><?= htmlspecialchars($post['CreationTimestamp']) ?></span></p>
+        </article>
+      <?php endforeach ?>
+   
+</section>
+
+</html>
+

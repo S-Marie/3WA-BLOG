@@ -1,0 +1,188 @@
+
+/**** GENERAL ****/
+
+*{
+	box-sizing: border-box;
+}
+
+body{
+	margin: 0 auto;
+	font-family: "Montserrat";
+	background-color: #fdfeff;
+}
+
+header {
+	margin-top: -4em;
+	border-bottom : 20px solid #C8D190;
+	background-color: #7A457C;
+	padding: 2em;
+}
+
+h1{
+	font-family: "Amatic SC";
+	font-size: 5em;
+	text-align: center;
+	color: #C8D190;
+}
+
+nav{
+	text-align: right;
+	margin: 0 2em;
+}
+
+nav>a{
+	display: inline-block;
+	padding: 0 1em;
+	text-decoration: none;
+	color: #C8D190;
+}
+
+main{
+	margin: 2em;
+}
+
+h2, #title, #title2, h4, #table>a{
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #869957;
+}
+
+footer{
+	margin: 2em;
+	font-size: 0.6em;
+}
+
+/**** INDEX - SHOWPOST HTML ****/
+
+#title2{
+	text-align: center;
+}
+
+#title>a{
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #869957;
+}
+
+#article{
+	margin: 3em;
+}
+
+#contents{
+	font-size: 1.2em;
+}
+
+#source{
+	font-size: 0.8em
+}
+
+/**** FORMULAIRE ****/
+
+form{
+	margin: 0 25em;
+	width: 20em;
+	text-align: center;
+}
+
+
+#newArticle {
+	margin: 0 10em;
+	width: 50em;
+}
+
+#newArticle p{
+	text-align: left;
+}
+
+#newArticle textarea{
+
+	width: 65em;
+}
+
+fieldset, #newArticle fieldset{
+	border: none;
+	border: 2px solid #C8D190;
+
+}
+
+legend, #newArticle legend {
+	color: #C8D190;
+	font-weight: bold;
+	font-size: 1.4em;
+	padding: 0 1em;
+}
+
+label,  #newArticle label{
+	font-size: 0.9em;
+}
+
+
+input[name=pseudo]{
+	width: 20em;
+}
+
+textarea{
+	width: 25em;
+}
+
+input[name=add], input[name=edit]{
+
+	border: none;
+	border: 1px solid green;
+	background-color: green;
+	padding: 1em;
+	color: #fff;
+	font-weight: bold;
+}
+
+input[name=reset]{
+
+	border: none;
+	border: 1px solid red;
+	background-color: red;
+	padding: 1em;
+	color: #fff;
+	font-weight: bold;
+
+}
+
+/**** COMMENTAIRES ****/
+
+ul{
+	list-style-type: none;
+}
+
+li>article{
+	font-size: 0.9em;
+}
+
+/**** ADMIN - LISTE DES ARTICLES ****/
+
+#table{
+	margin: 0 10em;
+}
+
+#table>a:hover {
+	font-weight: bold;
+	text-decoration: underline;
+}
+.table1{
+	width: 50em;
+	text-align: center;
+}
+
+tr:nth-child(1){
+	font-weight: bold;
+}
+
+tr, td{
+		padding: 1em;
+}
+
+td>a{
+	text-decoration: none;
+	color: #869957;
+}
+
+
+

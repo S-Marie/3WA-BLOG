@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<h2><i class="fas fa-cogs"></i> Panneau d'Administration </h2>
+<section id="article">
+   
+   <form class="generic-form" action="edit_post.php" method="post">
+
+    <input type="hidden" name="postId" value="<?= intval($post['Id']) ?>">
+
+    <fieldset>
+        <legend><i class="fa fa-sticky-note-o"></i> Article</legend>
+        <ul>
+            <li>
+                <label for="title">Titre :</label>
+                <input type="text" id="title" name="title" value="<?= htmlspecialchars($post['Title']) ?>">
+            </li>
+            <li>
+                <label class="textarea" for="contents">Article :</label>
+                <textarea id="contents" name="contents" rows="15"><?= htmlspecialchars($post['Contents']) ?></textarea>
+            </li>
+            <li>
+              <input type="submit" name="add" value="Ajouter" />
+             <input type="submit" name="reset" value="Annuler" />
+            </li>
+        </ul>
+    </fieldset>
+</form>
+
+
+</html>

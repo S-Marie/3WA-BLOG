@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<h2><i class="fas fa-home"></i> Accueil</h2>
+<section id="article">
+   
+    <?php foreach($showPosts as $showPost): ?>
+     	<article>
+        	<h3 id="title"><i class="fas fa-thumbs-up"></i> <?= htmlspecialchars($showPost['Title']) ?></h3>
+          	<p id="contents"><?= htmlspecialchars($showPost['Contents']) ?></p>
+         	<p id="source">Rédigé par <span><?= htmlspecialchars($showPost['FirstName']) ?> <?= htmlspecialchars($showPost['LastName']) ?></span> le <span><?= htmlspecialchars($showPost['CreationTimestamp']) ?></span></p>
+        </article>
+
+    <?php endforeach ?>
+</section>
+<hr>
+
+<ul class="comment-list">
+    <?php foreach($comments as $comment): ?>
+        <li class="comment">
+            <h4><i class="fa fa-comment"></i> Rédigé par <?= htmlspecialchars($comment['NickName']) ?></h4>
+            <article><?= htmlspecialchars($comment['Contents']) ?></article>
+        </li>
+    <?php endforeach; ?>
+</ul>
+
+<hr>
+<form method="POST" action="form.php">
+	<fieldset>
+   		<legend> Nouveau Commentaire</legend>
+   			 <input type="hidden" name="postId" value="<?= intval($_GET['id']) ?>">
+   			<p>
+   			<label>Pseudo :</label><p>
+   			<p><input type="text" name="pseudo" /></p>
+
+   			<p>
+   			<label>Commentaire :</label></p>
+   			<p><textarea name="comments"></textarea></p>
+
+   			<input type="submit" name="add" value="Ajouter" />
+   			<input type="submit" name="reset" value="Annuler" />
+   	</fieldset>
+</form>
+
+
+</html>
+

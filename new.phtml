@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<h2><i class="fas fa-cogs"></i> Panneau d'Administration </h2>
+<section id="article">
+<article>
+<form method="POST" action="new.php" id="newArticle">
+	<fieldset>
+   		<legend> Nouvel Article </legend>
+   			<p>
+   			<label>Titre :</label><p>
+   			<p><input type="text" name="title" /></p>
+
+   			<p>
+   			<label>Contenu :</label></p>
+   			<p><textarea name="content"></textarea></p>
+
+   			<p>
+   			<label>Auteur :</label><p>
+   			<select name="author" id="author">
+   			<?php foreach($auteurs as $auteur): ?>
+   				<option value="<?= intval($auteur['Id']) ?>">
+   					<?= htmlspecialchars($auteur['FirstName']) ?>&nbsp;<?= htmlspecialchars($auteur['LastName']) ?>
+   					</option>
+   				<?php endforeach; ?>
+   			</select>
+   			</p>
+
+   			<p>
+   			<label>Catégorie :</label><p>
+   			<select name="category" id="category">
+   			<?php foreach ($categories as $categorie): ?>
+   				<option value="<?= intval($categorie['Id']) ?>">
+   					<?= htmlspecialchars($categorie['Name']) ?>
+   					</option>
+   			<?php endforeach; ?>
+   			</select>
+   			</p>
+
+   			<input type="submit" name="add" value="Ajouter" />
+   			<input type="submit" name="reset" value="Annuler" />
+   	</fieldset>
+</form>
+</article>
+</section>
+</html>
